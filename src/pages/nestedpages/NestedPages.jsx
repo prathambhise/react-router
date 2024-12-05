@@ -4,6 +4,8 @@ function NestedPages (){
     return(
         <>
         <h2>Nested Pages</h2>
+        <p>If we comment index route tag in main.jsx,<br /> 
+         element in it won't get auto displayed.'</p>
         <nav>
             <Link to='page-inside-1'>Page Inside 1</Link>
             <Link to='page-inside-2'>Page Inside 2</Link>
