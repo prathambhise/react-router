@@ -1,0 +1,25 @@
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.body-container-main{
+  margin: 10px;
+}
+
+.primary-nav{
+  background-color: aliceblue;
+  padding: 16px 32px;
+  margin: 0;
+}
+
+nav a{
+  margin-right: 16px;
+}
+
+nav a.active{
+  text-decoration: none;
+  font-weight: bold;
+}
