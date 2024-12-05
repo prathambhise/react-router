@@ -15,7 +15,7 @@ import UserDetails from "./pages/droute/userdetails/UserDetails";
 import AdminDetails from "./pages/droute/userdetails/AdminDetails";
 import React from "react";
 // import { lazy, Suspense } from "react";
-const LazyAbout = React.lazy(()=> import('./pages/about/About'))
+const LazyAbout = React.lazy(() => import("./pages/about/About"));
 
 function App() {
   return (
@@ -27,13 +27,19 @@ function App() {
           <Route path="/" element={<Home />} />
           {/* <Route path="about" element={<About />} /> */}
           {/* <Route path="about" element={<LazyAbout />} /> */}
-          <Route path="about" element={
-            <React.Suspense fallback = 'Loading...'><LazyAbout /></React.Suspense>
-            } />
+          <Route
+            path="about"
+            element={
+              <React.Suspense fallback="Loading...">
+                <LazyAbout />
+              </React.Suspense>
+            }
+          />
           <Route path="pagestack1" element={<PageStack1 />} />
           <Route path="pagestack2" element={<PageStack2 />} />
           <Route path="pagestack3" element={<PageStack3 />} />
           <Route path="nestedpages" element={<NestedPages />}>
+            <Route index element={<PageInside2 />} />
             <Route path="page-inside-1" element={<PageInside1 />} />
             <Route path="page-inside-2" element={<PageInside2 />} />
           </Route>
